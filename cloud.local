@@ -1,11 +1,12 @@
-$ORIGIN cloud.local.
+$ORIGIN clim.nl.
 $TTL 3H
-@		IN SOA	@ cloud.local. (
-				119        ; serial
-				86400      ; refresh (1 day)
-				3600       ; retry (1 hour)
-				604800     ; expire (1 week)
-				10800      ; minimum (3 hours)
-				)
-			NS	dns.cloud.local.
-dns		IN	A	192.168.37.10
+@	IN SOA  @ clim.nl. (
+                                        0	; serial
+                                        1D	; refresh
+                                        1H	; retry
+                                        1W	; expire
+                                        3H )    ; minimum
+        NS	dns.clim.nl.
+dns     IN	A	192.168.37.130
+main    IN	A	192.168.37.129
+www     IN	CNAME   dns
